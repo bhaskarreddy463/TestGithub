@@ -1,0 +1,23 @@
+*{margin:0;	padding:0;}
+img{border:0;}
+button, input[type="button"], input[type="submit"],input[type="reset"]{ cursor:pointer;}
+html, body{ min-height:100%;}
+img{max-width:100%;	height:auto;	width:auto\9;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{display:block;}
+input, select{font-family:'Open Sans', Helvetica, Arial, sans-serif; letter-spacing: 1px;}
+body{ background:url(../images/background.png) no-repeat center top fixed; background-size:cover; background-position:fixed; color:#000; font-size:14px; font-weight:300; font-family:'Open Sans', Helvetica, Arial,sans-serif; letter-spacing: 1px;}
+
+.clearfix:after {  content: ".";  display: block;  clear: both;  visibility: hidden; line-height: 0;  height: 0;  }  
+.clearfix {  display:block;  }  
+html[xmlns] .clearfix {  display: block;  }  
+* html .clearfix {  height: 1%;  } 
+
+html {  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+/*select Box*/
+select{  font-size:14px;  cursor:pointer; -webkit-appearance:none;   -moz-appearance:none;   appearance:none;  text-indent: 1px;   text-overflow: '';}
+select::-ms-expand{  display:none;} /* For IE browser*/
+
+

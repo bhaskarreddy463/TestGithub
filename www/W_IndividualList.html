@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/component.css">
+<!-- For progressively larger displays -->
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="W_MenuScreen.html">Home</a></li>
+				<!-- <li><a href="#">My Profile</a></li> -->
+				<li id="W_logout"><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    	<!-- <a id="AddIndividualOne" href="#"><img src="images/add.png" alt="Top remove icon"></a> -->
+    </div>
+	<div class="header-bottom">
+		<div class="clearfix margin-bottom-10"><input type="text" id="txtSearch" placeholder="Search" name="" class="search-area"></div>
+		<h3 class="text-left float-left margin-bottom-10 none">Driver List</h3>
+		<div id="AddIndividualOne" class="float-right add-image none"><img src="images/plus-icon.png" border="0" alt="Add Vehicle" class="vertical-top margin-right-5" width="23px"><span class="orange-content"><a href="#" class="orange-color">Add Driver</a></span></div>
+	</div>
+</header>
+
+<section class="extra">
+       	<div id="divIndividualList" class="margin-bottom-30 vehicle-background-details">
+			No Data
+		</div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script> 
+$(document).ready(function(){
+	debugger;
+	main("WholesalerIndividualList");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/View/ViewWholesalerIndividualList.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script>
+	$(function() {
+		$( '#dl-menu' ).dlmenu();
+	});
+</script>
+	<div class="loading" id="loader" align="center">
+	    <div class="loading-div">
+	    </div>
+	</div>
+</body>
+</html>

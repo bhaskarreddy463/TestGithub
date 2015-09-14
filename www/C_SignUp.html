@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<!-- For progressively larger displays -->
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<!-- <a href="#"><img src="images/menu_icn.png" alt="Nav icon"></a> -->
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    
+    </div>
+</header>
+<section>
+	<h3>Trucking Company Sign Up</h3>
+<div class="text-center">
+	<select name="" id="ddlCompanySignup">
+		<option id="1">Direct Trucking Company</option>
+		<option id="2">Linked to Service Company</option>
+	</select>
+</div>
+<form action="" id="formwithoutwholesaler" method="post">
+    <div>
+        <div id="input" class="margin-bottom-30">
+        	<input id="hiddenUserType" type="hidden" name="RoleId" value="3">
+            <input id="hiddenInsert" type="hidden" name="Flag" value="I">
+            <input id="hiddenStatus" type="hidden" name="IsActive" value="true">
+            <div class="text-center">
+            	<input id="txtwithCompanyName" name="Name" type="text" placeholder="Trucking Company Name" maxlength="50" >
+            	<label id="lblwithCompanyName" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtwithEmailID" name="EmailID" type="email" placeholder="Email ID" maxlength="50">
+            	<label id="lblwithEmailID" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtwithPhoneNo" name="Phone1" type="tel" placeholder="Phone Number" maxlength="10" >
+            	<label id="lblwithPhoneNo" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtwithContactPersonName" name="Contact_Person" type="text" placeholder="Contact Person Name" maxlength="50" >
+            	<label id="lblwithContactPersonName" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtwithCompanyUserID" name="UserName" type="text" placeholder="Trucking Company User ID" maxlength="50">
+            	<label id="lblwithCompanyUserID" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtwithPassword" name="Password" type="password" placeholder="Password" maxlength="20">
+            	<label id="lblwithPassword" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtwithRePassword" name="" type="password" placeholder="Re-enter Password" maxlength="20">
+            	<label id="lblwithRePassword" class="errorLbl"> </label>
+            </div>
+        </div>
+    </div>
+    <div id="button" class="margin-bottom-20">
+        <div class="text-center width-50"><input name="" value="Back" type="button" class="reset-button btnBack"></div>
+        <div class="text-center width-50"><input id="btnwithSignUp" name="" type="submit" value="Sign Up" class="login-button"></div>
+	</div>
+
+</form>
+
+<form action="" id="formwithwholesaler" method="post" class="inputhide">
+    <div>
+        <div class="margin-bottom-30">
+    	      <input id="hiddenwithInsert" type="hidden" name="Flag" value="CA">
+                <input id="hiddenwithStatus" type="hidden" name="IsActive" value="true">
+                <input id="hiddenRoleId" type="hidden" name="RoleId" value="2">
+                <!-- <input id="hiddenAllowtoSignUp" type="hidden" name="IsSignUpAllowed" value="true"> -->
+            <div class="text-center">
+            	<input id="txtWholesalerUserID" name="SecurityKeyForSignUPAllowedBy" type="text" placeholder="Service Company UserID" maxlength="50">
+            	<label id="lblWholesalerUserID" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtRegistrationID" name="SecurityKeyForSignUP" type="text" placeholder="Registration ID" maxlength="50">
+            	<label id="lblRegistrationID" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtCompanyUserID" name="UserName" type="text" placeholder="Trucking Company User ID" maxlength="50">
+            	<label id="lblCompanyUserID" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtPassword" name="Password" type="password" placeholder="Password" maxlength="20">
+            	<label id="lblPassword" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtRePassword" name="" type="password" placeholder="Re-enter Password" maxlength="20">
+            	<label id="lblRePassword" class="errorLbl"> </label>
+            </div>
+        </div>
+    </div>
+    <div class="margin-bottom-20">
+        <div class="text-center width-50"><input name="" value="Back" type="button" class="reset-button btnBack"></div>
+        <div class="text-center width-50"><input id="btnSignUp" name="" type="submit" value="Signup" class="login-button"></div>
+	</div>
+</form>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script>
+$(document).ready(function(){
+	debugger;
+	main("CompanySignUp");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/Model/LoginAsModel.js"></script>
+<script src="js/View/C_SignUp.js"></script>
+<div class="loading" id="loader" align="center">
+    <div class="loading-div">
+    </div>
+</div>
+</body>
+</html>

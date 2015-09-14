@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<!-- For progressively larger displays -->
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<!-- <a href="#"><img src="images/menu_icn.png" alt="Nav icon"></a> -->
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    
+    </div>
+</header>
+<form action="" id="AjaxSubmit" method="post">
+<section>
+	<h3>Service Company Sign Up</h3>
+    <div id="">
+        <div id="input" class="margin-bottom-30">
+        	<input id="hiddenUserType" type="hidden" name="RoleId" value="2">
+            <input id="hiddenInsert" type="hidden" name="Flag" value="I">
+            <input id="hiddenStatus" type="hidden" name="IsActive" value="true">
+            <div class="text-center">
+            	<input id="txtWholesalerName" name="Name" type="text" placeholder="Service Company Name" maxlength="50">
+            	<label id="lblWholesalerName" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtEmailID" name="EmailID" type="email" placeholder="Email ID" maxlength="50">
+            	<label id="lblEmailID" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtPhoneNo" name="Phone1" type="tel" placeholder="Phone Number" maxlength="10">
+            	<label id="lblPhoneNo" class="errorLbl"> </label>
+            </div>
+            <div class="text-center">
+            	<input id="txtContactPersonName" name="Contact_Person" type="text" placeholder="Contact Person Name" maxlength="50">
+            	<label id="lblContactPersonName" class="errorLbl"> </label>
+        	</div>
+            <div class="text-center">
+            	<input id="txtChoseWholesalerID" name="UserName" type="text" placeholder="Choose User Name" maxlength="50">
+            	<label id="lblChoseWholesalerID" class="errorLbl"> </label>
+        	</div>
+            <div class="text-center">
+            	<input id="txtPassword" name="Password" type="password" placeholder="Enter Password" maxlength="20">
+            	<label id="lblPassword" class="errorLbl"> </label>
+        	</div>
+            <div class="text-center">
+            	<input id="txtRePassword" type="password" placeholder="Re-enter Password" maxlength="20">
+            	<label id="lblRePassword" class="errorLbl"> </label>
+        	</div>
+        </div>
+    </div>
+    <div id="button" class="margin-bottom-20">
+        <div class="text-center width-50"><input id="btnBack" name="" value="Back" type="button" class="reset-button"></div>
+        <div class="text-center width-50"><input id="btnSignUp" name="" type="submit" value="Sign Up" class="login-button"></div>
+        
+	</div>
+</section>
+</form>
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script>
+$(document).ready(function(){
+	debugger;
+	main("WholesalerSignUp");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/Model/LoginAsModel.js"></script>
+<script src="js/View/ViewsWholesalerSignUp.js"></script>
+<div class="loading" id="loader" align="center">
+    <div class="loading-div">
+    </div>
+</div>
+</body>
+</html>

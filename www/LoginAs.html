@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css"> 
+<!-- For progressively larger displays -->
+<link rel="stylesheet" media="only all and (min-width: 480px)" href="css/480.css">
+<link rel="stylesheet" media="only all and (min-width: 768px)" href="css/768.css">
+<link rel="stylesheet" media="only all and (min-width: 992px)" href="css/992.css">
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<!-- <a href="#"><img src="images/menu_icn.png" alt="Nav icon"></a> -->
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    	
+    </div>
+</header>
+<section>
+	<h3 class="gap">Login as :</h3>
+    <div class="text-center clearfix"><input id="btnDriver" name="" type="button" value="Driver" class="login-button"></div>
+    <div class="text-center"><input id="btnCompany" name="" type="button" value="Trucking Company" class="login-button"></div>
+    <div class="text-center"><input id="btnWholesaler" name="" type="button" value="Service Company" class="login-button"></div>
+
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script> 
+$(document).ready(function(){
+	debugger;
+	main("LoginAs");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Common/Common.js"></script>
+<script src="plugins/cordova-plugin-dialogs/www/android/notification.js"></script>
+<script src="js/Model/LoginAsModel.js"></script>
+<script src="js/View/ViewLoginAs.js"></script>
+<script src="js/Controller/ControllerLoginAs.js"></script>
+
+
+</body>
+</html>

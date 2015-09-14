@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/component.css">
+<!-- For progressively larger displays -->
+<link rel="stylesheet" media="only all and (min-width: 480px)" href="css/480.css">
+<link rel="stylesheet" media="only all and (min-width: 768px)" href="css/768.css">
+<link rel="stylesheet" media="only all and (min-width: 992px)" href="css/992.css">
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="W_MenuScreen.html">Home</a></li>
+				<!-- <li><a href="#">My Profile</a></li> -->
+				<li id="W_logout"><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    	
+    </div>
+</header>
+<form id="formAddCompany">
+<section>
+	<h3><span id="sp_AddEdit">Add</span> Driver</h3>
+    <div id="input" class="margin-bottom-30 clearfix">
+        <div class="text-center select-style margin-bottom-6">
+            <select id="ddlCompanyList">
+                <option id="-1">--Select Trucking Company--</option>
+            </select>
+        </div>
+        <label id="lblCompanyList" class="errorLbl"> </label>
+        <!--<input id="hiddenFk_WholesalerUserID" type="hidden" name="CreatedByID" value="">-->
+        <input type="hidden" name="Flag" id="hidFlag" value="I">
+        <input type="hidden" name="IsActive" id="hidIActive" value="true">
+        <input type="hidden" name="CreatedByID" id="hidAddCompany" value="-1">
+        <input type="hidden" name="ID" id="hidIndividualID" value="">
+        <div class="text-center">
+        	<input id="txtFName" name="Name" type="text" placeholder="Driver Name" maxlength="50">
+        	<label id="lblFName" class="errorLbl"> </label>
+        </div>
+        <div class="text-center">
+        	<input id="txtPhone" name="Phone1" type="tel" placeholder="Phone Number" maxlength="10"/>
+        	<label id="lblPhone" class="errorLbl"> </label>
+        </div>
+        <div class="text-center">
+        	<input id="txtUserID" name="DriverID" type="text" placeholder="User ID" maxlength="50"/>
+        	<label id="lblUserID" class="errorLbl"> </label>
+        </div>
+        <div class="text-center">
+        	<input id="txtEmailID" name="EmailID" type="email" placeholder="Email ID" maxlength="50">
+        	<label id="lblEmailID" class="errorLbl"> </label>
+        </div>
+	</div>
+	<div id="" class="margin-bottom-20">
+        <div class="text-center width-50"><input id="btnBack" name="" type="button" value="Back" class="login-button"></div>
+        <div class="text-center width-50"><input name="" type="submit" value="Save" class="login-button"></div>
+	</div>
+</section>
+</form>
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script>
+$(document).ready(function(){
+	debugger;
+	main("WholesalerAddIndividual");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/View/ViewAddIndividual.js"></script>
+<script src="js/Controller/ControllerLoginAs.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script>
+	$(function() {
+		$( '#dl-menu' ).dlmenu();
+	});
+</script>
+	<div class="loading" id="loader" align="center">
+	    <div class="loading-div">
+	    </div>
+	</div>
+</body>
+</html>

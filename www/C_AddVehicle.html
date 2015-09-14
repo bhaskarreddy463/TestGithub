@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/component.css">
+<!-- For progressively larger displays -->
+<link rel="stylesheet" media="only all and (min-width: 480px)" href="css/480.css">
+<link rel="stylesheet" media="only all and (min-width: 768px)" href="css/768.css">
+<link rel="stylesheet" media="only all and (min-width: 992px)" href="css/992.css">
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="C_MenuScreen.html">Home</a></li>
+				<!-- <li><a href="#">My Profile</a></li> -->
+				<li id="C_logout"><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    	<!--<a href="#"><img src="images/remove_icn.png" alt="Top remove icon"></a>-->
+    </div>
+</header>
+<section>
+	<form id="frmAddVehicle">
+	<div class="white-content float-left clearfix margin-bottom-20"><span id="sp_AddEdit">Add</span> Vehicle</div>
+	<div id="input" class="margin-bottom-20">
+        <div class="text-center">
+        	<input id="txtVehicleNumber" name="VehicleNumber" type="text" placeholder="Vehicle Identification Number" maxlength="50">
+        	<label id="lblVehicleNumber" class="errorLbl"> </label>
+        </div>
+        <div class="text-center">
+        	<input id="txtVehicleId" name="VehicleId" type="text" placeholder="Vehicle ID" maxlength="50">
+        	<label id="lblVehicleId" class="errorLbl"> </label>
+        </div>
+        <input type="hidden" name="CreatedByID" id="hidCompanyUserID" value="">
+        <input type="hidden" name="Flag" id="hidFlag" value="I">
+        <input type="hidden" name="RequestFrom" value="Mobile">
+      <!--  <input type="hidden" name="IsActive" id="hidIActive" value="true">-->
+        <input type="hidden" name="ID" id="hiddenVehicleID">
+    </div>
+    <div class="margin-bottom-20" id="button">
+        <div class="text-center width-50"><input id="btnBack" type="button" class="reset-button" value="Back" name=""></div>
+        <div class="text-center width-50"><input id="btnCreateVehicle" type="submit" class="login-button" value="Save" name=""></div>
+	</div>
+	</form>
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script> 
+$(document).ready(function(){
+	debugger;
+main("CompanyAddVehicle");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/View/C_AddVehicle.js"></script>
+<script src="js/Controller/ControllerAddVehicle.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script>
+	$(function() {
+		$( '#dl-menu' ).dlmenu();
+	});
+</script>
+<div class="loading" id="loader" align="center">
+    <div class="loading-div">
+    </div>
+</div>
+</body>
+</html>

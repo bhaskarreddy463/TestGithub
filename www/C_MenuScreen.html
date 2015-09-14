@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/component.css">
+<!-- For progressively larger displays -->
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<!-- <li><a href="W_MenuScreen.html">Home</a></li> -->
+				<!--<li><a href="#">My Profile</a></li>-->
+				<li id="C_logout"><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    	<!-- <a id="sendtoLoginAS" href="#"><img src="images/remove_icn.png" alt="Top remove icon"></a> -->
+    </div>
+</header>
+<section>
+	<div class="white-content clearfix margin-bottom-20">
+    <span class="float-left">Trucking Company ID : <span id="CompanyUserID"> </span></span>
+    </div>
+	<div id="" class="margin-bottom-30">
+        <!-- <div class="text-center width-25"><div id="divCompanyList" class="clearfix text-center menu-button"><img src="images/company-icon.png" alt="Company icon"><br>Company List</div></div> -->
+        <div class="text-center width-25"><div id="divVehicle" class="clearfix text-center menu-button  box-ctr"><img src="images/vehicle.png" alt="Vehicle icon"><br>Vehicle List</div></div>
+        <div class="text-center width-25"><div id="divIndividual" class="clearfix text-center menu-button3  box-ctr2"><img src="images/driverprofileicon.png" alt="driverprofileicon icon"><br>Driver List</div></div>
+        <div id="ShowdivTrip" class="text-center width-40"><div id="divTrip" class="clearfix text-center menu-button box-ctr trip-ctr"><img src="images/trip.png" alt="Trip icon"><br>Trip Summary</div></div>
+	</div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+
+<script> 
+$(document).ready(function(){
+	debugger;
+	main("CompanyMenuScreen");
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/View/C_MenuScreen.js"></script>
+
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script>
+	$(function() {
+		$( '#dl-menu' ).dlmenu();
+	});
+</script>
+
+</body>
+</html>

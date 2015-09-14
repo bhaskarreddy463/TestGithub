@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/component.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<!-- For progressively larger displays -->
+<link rel="stylesheet" media="only all and (min-width: 480px)" href="css/480.css">
+<link rel="stylesheet" media="only all and (min-width: 768px)" href="css/768.css">
+<link rel="stylesheet" media="only all and (min-width: 992px)" href="css/992.css">
+
+<title>IFTRAK</title>
+</head>
+<body>
+<header class="header clearfix">
+    <div class="menu-icon">
+    	<div id="dl-menu" class="dl-menuwrapper">
+			<button class="dl-trigger">Open Menu</button>
+			<ul class="dl-menu">
+				<li><a href="C_MenuScreen.html">Home</a></li>
+				<!-- <li><a href="#">My Profile</a></li> -->
+				<li id="C_logout"><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="logo">
+    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+    </div>
+    <div class="close-icon text-right">
+    	<!--<a href="#"><img src="images/remove_icn.png" alt="Top remove icon"></a>-->
+    </div>
+</header>
+<section>
+	<form id="formTripSummary">
+		<div class="white-content float-left clearfix margin-bottom-20">Trip Summary</div>
+		<div class="margin-bottom-20">
+			<input type="hidden" id="hidCompUserID1" name="UserId" value=0 />
+			<input type="hidden" id="hidisSendMail" name="isSendMail" value=false />
+			<input type="hidden" id="hidWholeSalerID1" name="WholeselerID" value=0 />
+					<input type="hidden" id="hidCreatedById" name="CreatedById" value=0 />
+			<input type="hidden" id="hidCompUserID" name="CompanyId" value="" />
+			<div class="text-center">
+				<select name="" id="ddlVehicleList">
+					<option id="-1">--Select Vehicle Number--</option>
+				</select>
+				<label id="lblVehicleList" class="errorLbl"> </label>
+				<input type="hidden" id="hidVehicleId" name="VehicleId" value="-1" />
+			</div>
+	        <div class="text-center">
+	        	<input type="text" id="txtFromDate" pattern="[0-9]+([\,|\.][0-9]+)?" placeholder="From Date" name="StartDate" size="20" min="0" max="9999999999" maxlength="10" readonly/>
+	        	<label id="lblFromDate" class="errorLbl"> </label>
+	        </div>
+	        <div class="text-center">
+	        	<input type="text" id="txtToDate" pattern="[0-9]+([\,|\.][0-9]+)?" placeholder="To Date" name="EndDate" size="20" min="0" max="9999999999" maxlength="10" readonly/>
+	        	<label id="lblToDate" class="errorLbl"> </label>
+	        </div>
+	    </div>
+	    <div class="margin-bottom-20 clearfix" id="button">
+	        <div class="text-center width-50"><input id="btnBack" type="button" class="reset-button" value="Back" ></div>
+	        <div id="divReport" class="text-center width-50"><input id="btnTripSummaryReport" type="submit" class="login-button" value="GO" ></div>
+	        <div id="divSend" class="text-center width-50" style="display: none"><input id="btnTripSummarySend" type="button" class="login-button" value="Send" name=""></div>
+		</div>
+		<span class="note">Note : Selecting "All" option in Vehicle Dropdown will send a detailed report to the registered E-mail ID.</span>
+	</form>
+	<form id="formShowTripDetails" style="display: none">
+		<section class="tab-panel tab-pad clearfix">
+					<div id="tabTripSummary" class="active">Trip Summary</div>
+					<div id="tabFuelSummary" >Fuel Summary</div> 
+				</section>
+		<div class="margin-bottom-30 trip_deatal_ft">
+					<div id="TripSummaryDetails" class="trip_detail_table">
+				        <div class="trip_detail_container">
+					        <div class="btm trip_detail_thead padd_10"><label class="head_color">State</label></div>
+					        <div class="btm trip_detail_thead padd_10"><label class="head_color">Distance</label></div>
+					        <!-- <div class="btm trip_detail_thead brd_rt padd_10"><label class="head_color">Add/Edit</label></div> -->
+				        </div>
+				        <div id="divVehTripDetails" class="trip_data-scroll">
+				        	
+							</div> 
+				        </div>
+			      
+			        <div id="FuelSummaryDetails" class="trip_detail_table" style="display: none;">
+				        <div class="trip_detail_container">
+					        <div class="btm trip_detail_thead padd_10"><label class="head_color">Fuel Station</label></div>
+					        <div class="btm trip_detail_thead padd_10"><label class="head_color">No of Gal</label></div>
+					        <div class="btm trip_detail_thead padd_10"><label class="head_color">$Amount</label></div>
+					        
+				        </div>
+				        <div id="divVehFuelDetails" class="trip_data-scroll">
+						</div>
+				        </div>
+			        </div>
+			        <div class="clearfix">
+        <div class="text-center width-50 clearfix"><input id="btnTripBack" type="button" class="reset-button" value="Back"></div>
+        <div class="text-center width-50 clearfix"><input id="btnTripSendMail" type="button" class="login-button" value="Send" name=""></div>
+        </div>
+        <span class="note">Note : Clicking "Send" button will send a detailed report to the registered Email ID.</span>
+	</form>
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="cordova.js"></script>
+<script> 
+$(document).ready(function(){
+	debugger;
+	main("CompanyTripSummary");
+	$( "#txtFromDate" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      maxDate: new Date(),
+      dateFormat: 'yy-mm-dd',
+      onClose: function( selectedDate ) {
+      	debugger;
+        $( "#txtToDate" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#txtToDate" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      maxDate: new Date(),
+      dateFormat: 'yy-mm-dd',
+      onClose: function( selectedDate ) {
+      	debugger;
+        $( "#txtFromDate" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+	
+	
+  $(".mobile-btn").click(function(){
+    $(".show-menu").toggleClass("hide-show");
+  });
+});
+</script>
+<script src="js/html5.js"></script>
+
+<script src="js/Main.js"></script>
+<script src="js/Model/MainModel.js"></script>
+<script src="js/View/MainView.js"></script>
+<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/AjaxCall.js"></script>
+<script src="js/Common/Common.js"></script>
+
+<script src="js/Model/AddVehicleModel.js"></script>
+<script src="js/View/C_TripSummary.js"></script>
+<script src="js/Controller/ControllerAddVehicle.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script>
+	$(function() {
+		$( '#dl-menu' ).dlmenu();
+	});
+</script>
+<div class="loading" id="loader" align="center">
+    <div class="loading-div">
+    </div>
+</div>
+</body>
+</html>

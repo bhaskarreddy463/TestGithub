@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- For Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/main-style.css">
+<link rel="stylesheet" href="css/reset.css">
+<!-- For progressively larger displays -->
+<title>IFTRAK</title>
+</head>
+<body id="test">
+	<header class="header clearfix">
+	    <div class="menu-icon">
+			<a href="LoginAs.html"><img src="images/back.png" style="height: 25px; width: auto;" alt="back"></a>
+	    	<!-- <a href="#"><img src="images/menu_icn.png" alt="Nav icon"></a> -->
+	    </div>
+	    <div class="logo">
+	    	<a href="#"><img src="images/logo.png" alt="Logo image"></a>
+	    </div>
+	    <div class="close-icon text-right">
+	    	
+	    </div>
+	</header>
+	<form id="CompanyLoginform" action="">
+	<section>
+		<h3>Login</h3>
+		<div id="input" class="margin-bottom-20">
+	        <div class="text-center">
+	        	<input id="txtUserID" name="UserName" type="text" placeholder="User ID" maxlength="50"/>
+	        	<label id="lblUserID" class="errorLbl"> </label>
+	        </div>
+	        <div class="text-center">
+	        	<input id="txtPassword" name="Password" type="password" placeholder="Password"  maxlength="20"/>
+	        	<label id="lblPassword" class="errorLbl"> </label>
+	        </div>
+	        <label id="lblServerError" class="errorLbl"> </label>
+	    </div>
+	    <div id="section-sub-items" class="margin-bottom-20 clearfix">
+		<div class="float-left">
+	        <input id="chkRememberMe" type="checkbox" name="checkbox" value="1" checked="checked"><label for="checkbox1" class="white-content"><span></span>Remember me</label>
+	    </div>
+	    <div class="float-right">
+			<div class="anchor-content"><a id="forgotPWD" href="C_ForgotPassword.html">Forgot Password</a></div>
+		</div>
+		</div>
+	    <div id="button" class="margin-bottom-20">
+	        <div class="text-center width-50"><input id="btnSignUp" name="" type="button" value="Sign Up" class="reset-button"></div>
+	        <div class="text-center width-50"><input name="" type="submit" value="Login" class="login-button"></div>
+		</div>
+	</section>
+	</form>
+	<script src="js/jquery.min.js"></script>
+	<script src="cordova.js"></script>
+	<script> 
+		$(document).ready(function(){
+			main("CompanyLogin");
+		  $(".mobile-btn").click(function(){
+		    $(".show-menu").toggleClass("hide-show");
+		  });
+		});
+	</script>
+	<script src="js/html5.js"></script>
+	<script src="js/Main.js"></script>
+	<script src="js/Model/MainModel.js"></script>
+	<script src="js/View/MainView.js"></script>
+	<script src="js/Controller/MainController.js"></script>
+	<script src="js/Controller/AjaxCall.js"></script>
+	<script src="js/Common/Common.js"></script>
+	
+	<script src="js/View/C_Login.js"></script>
+	<script src="js/Controller/ControllerLoginAs.js"></script>
+		<div class="loading" id="loader" align="center">
+		    <div class="loading-div">
+		    </div>
+		</div>
+</body>
+</html>
